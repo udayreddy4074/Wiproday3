@@ -1,30 +1,42 @@
-﻿using System;
-using System.Text;
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        // immutable
-        string str = "hello";//memory will allocated
-      
-           str += "world";//new string in mem will be created
-        
-           Console.WriteLine(str);     
-        //mutable
-         StringBuilder sb= new StringBuilder(" Hello");
-         sb.Append("world");//mem will allocated to string builder and gets appended in the same mem
-        Console.WriteLine(sb);
-        Console.WriteLine("Enter string by normal string input");
-        string? userinput=Console.ReadLine();//removes warning
-        Console.WriteLine(userinput);
-        Console.WriteLine("Enter the string append");
-        string appendstr=Console.ReadLine();
-        userinput += appendstr;
-        Console.WriteLine(userinput);
-        Console.WriteLine("Enter string using string builder");
-        StringBuilder sbobj = new StringBuilder(Console.ReadLine());
-        sbobj.Append(appendstr);
-        Console.WriteLine(sbobj); ;
+        Console.WriteLine("enter row size ");
+        int row = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter col size ");
+        int col = Convert.ToInt32(Console.ReadLine());
+        int[,] mdarr = new int[row, col];
+        for (int i = 0; i < row; i++)//read
+        {
+            for (int j = 0; j < col; j++)
+            {
+                Console.Write($" elemnts[{i},{j}]:");
+                int ele = Convert.ToInt32(Console.ReadLine());//mdarr=int.Parse(Console.ReadLine());
+                mdarr[i, j] = ele;
+            }
+        }
+        Console.WriteLine();
 
-    }
-}
+        for (int i = 0; i < row; i++)//display
+        {
+
+            for (int j = 0; j < col; j++)
+            {
+
+                Console.Write(mdarr[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+        //sum of elements in mdarray
+        int sum = 0;
+        for (int i = 0; i < row; i++)
+        {
+            for (int j = 0; j < col; j++)
+            {
+                sum += mdarr[i, j];
+            }
+        }
+        Console.WriteLine("sum of elements in mdarray is:"+sum);
+    }  }
