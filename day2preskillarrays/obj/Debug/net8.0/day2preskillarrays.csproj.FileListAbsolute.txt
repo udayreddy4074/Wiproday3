@@ -1,0 +1,4 @@
+C:\Users\R UDAY KUMAR REDDY\source\repos\day2preskillarrays\day2preskillarrays\obj\Debug\net8.0\day2preskillarrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\R UDAY KUMAR REDDY\source\repos\day2preskillarrays\day2preskillarrays\obj\Debug\net8.0\day2preskillarrays.AssemblyInfoInputs.cache
+C:\Users\R UDAY KUMAR REDDY\source\repos\day2preskillarrays\day2preskillarrays\obj\Debug\net8.0\day2preskillarrays.AssemblyInfo.cs
+C:\Users\R UDAY KUMAR REDDY\source\repos\day2preskillarrays\day2preskillarrays\obj\Debug\net8.0\day2preskillarrays.csproj.CoreCompileInputs.cache
