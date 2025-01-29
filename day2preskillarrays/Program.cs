@@ -1,43 +1,30 @@
-﻿
+﻿using System;
+using System.Text;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        int[] arr = new int[4];
-        arr[1] = 50;
-        arr[3] = 150;
-        for (int i = 0; i < arr.Length; i++)
-        {
-            Console.WriteLine(arr[i]);
-        }
+        // immutable
+        string str = "hello";//memory will allocated
+      
+           str += "world";//new string in mem will be created
+        
+           Console.WriteLine(str);     
+        //mutable
+         StringBuilder sb= new StringBuilder(" Hello");
+         sb.Append("world");//mem will allocated to string builder and gets appended in the same mem
+        Console.WriteLine(sb);
+        Console.WriteLine("Enter string by normal string input");
+        string? userinput=Console.ReadLine();//removes warning
+        Console.WriteLine(userinput);
+        Console.WriteLine("Enter the string append");
+        string appendstr=Console.ReadLine();
+        userinput += appendstr;
+        Console.WriteLine(userinput);
+        Console.WriteLine("Enter string using string builder");
+        StringBuilder sbobj = new StringBuilder(Console.ReadLine());
+        sbobj.Append(appendstr);
+        Console.WriteLine(sbobj); ;
 
-        int[] a = { 1, 2, 13, 4, 85 };
-        show(a);
-        findmax(a);
     }
-
-    public static void show(int[] a)
-    {
-        foreach (int v in a)
-        {
-            Console.WriteLine(v);
-        }
-    }
-
-    static void findmax(int[] a)
-    {
-        int m = a[0];
-        for (int i = 1; i < a.Length; i++)
-        {
-            if (a[i] > m)
-            {
-                m = a[i];
-            }
-            Console.WriteLine("Max value is: " + m);
-        }
-        Console.WriteLine("FinalMax value is: " + m);
-    }
-
-
-
 }
